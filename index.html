@@ -1,0 +1,2904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music For All Hearts | Empower Youth Through Free Music Education</title>
+  <meta name="description" content="Supporting youth ages 4–18 through free music lessons in voice, piano, and guitar. Recently partnered with University Health Hospital in San Antonio, TX. 501(c)(3) Non-Profit." />
+  <link rel="icon" type="image/png" href="heart_icon.png" />
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      /* Deep Shiny Obsidian Black + Brushed Platinum Silver + Logo #1 Accents */
+      --obsidian: #040406;
+      --black-lacquer: #090A0E;
+      --smoky-glass: rgba(18, 20, 26, 0.72);
+      --smoky-glass-heavy: rgba(12, 13, 18, 0.88);
+      --smoky-elevated: rgba(26, 29, 38, 0.65);
+
+      /* Silver Shimmer & Specular Highlights */
+      --silver-bright: #F1F5F9;
+      --silver-mid: #CBD5E1;
+      --silver-muted: #94A3B8;
+      --silver-dim: #64748B;
+      --border-silver: rgba(226, 232, 240, 0.13);
+      --border-silver-bright: rgba(241, 245, 249, 0.28);
+
+      /* Logo #1 Signature Accents (Refined & High-Contrast) */
+      --magenta: #E11968;
+      --magenta-glow: #FF2E82;
+      --cyan: #0DB8CC;
+      --cyan-glow: #22D8ED;
+
+      /* Gradients */
+      --grad-brand: linear-gradient(135deg, var(--magenta) 0%, #8E248D 50%, var(--cyan) 100%);
+      --grad-cta: linear-gradient(135deg, #D91663 0%, #B51252 100%);
+      --grad-silver-text: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 45%, #94A3B8 100%);
+      --grad-smoky-surface: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(15,17,23,0.82) 45%, rgba(8,9,12,0.94) 100%);
+      --shadow-obsidian: 0 28px 65px -15px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(255, 255, 255, 0.08);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--obsidian);
+      color: var(--silver-bright);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background-color: var(--obsidian);
+      /* Deep Shiny Black with Smoky Silver Shimmer Layers */
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(203, 213, 225, 0.12), transparent 65%),
+        radial-gradient(circle at 15% 30%, rgba(255, 255, 255, 0.045), transparent 40%),
+        radial-gradient(circle at 85% 70%, rgba(148, 163, 184, 0.055), transparent 45%),
+        linear-gradient(180deg, #040406 0%, #0A0B10 35%, #050508 70%, #030305 100%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+      line-height: 1.65;
+      position: relative;
+    }
+
+    /* Global Smoky Glass Shimmer Overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        repeating-linear-gradient(
+          115deg,
+          rgba(255, 255, 255, 0.0) 0px,
+          rgba(255, 255, 255, 0.012) 1px,
+          rgba(255, 255, 255, 0.0) 2px,
+          rgba(255, 255, 255, 0.0) 9px
+        ),
+        radial-gradient(circle at 50% 0%, rgba(226, 232, 240, 0.07), transparent 55%);
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .serif-italic {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #040406; }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #475569, #94A3B8, #475569);
+      border-radius: 4px;
+    }
+
+    /* ==========================================
+       TOP PARTNERSHIP ANNOUNCEMENT BAR
+       ========================================== */
+    .top-bar {
+      background: rgba(10, 11, 15, 0.92);
+      border-bottom: 1px solid var(--border-silver);
+      padding: 10px 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1001;
+      font-size: 0.84rem;
+      backdrop-filter: blur(16px);
+    }
+
+    .announcement-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--silver-mid);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .announcement-pill:hover {
+      color: #fff;
+    }
+
+    .badge-live {
+      background: linear-gradient(135deg, rgba(225, 25, 104, 0.9), rgba(181, 18, 82, 0.95));
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 11px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-live::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+      animation: pulseDot 1.8s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(1.35); }
+    }
+
+    /* ==========================================
+       STICKY SMOKY-GLASS NAVIGATION (WITH AUTO-FADE ON SCROLL)
+       ========================================== */
+    header.navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(6, 7, 10, 0.84);
+      backdrop-filter: blur(24px) saturate(140%);
+      -webkit-backdrop-filter: blur(24px) saturate(140%);
+      border-bottom: 1px solid var(--border-silver);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.65);
+      padding: 12px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 1;
+      transition:
+        opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        padding 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.65s ease,
+        box-shadow 0.65s ease,
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Softly fade top menu down to ~50% when scrolled, and ~44% while actively scrolling */
+    header.navbar.nav-scrolled {
+      opacity: 0.52;
+      background: rgba(5, 6, 9, 0.55);
+      padding: 9px 5%;
+      border-bottom-color: rgba(226, 232, 240, 0.08);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    header.navbar.nav-scrolling {
+      opacity: 0.44;
+    }
+
+    /* Smoothly restore 100% visibility whenever the user hovers or focuses the navbar */
+    header.navbar:hover,
+    header.navbar:focus-within {
+      opacity: 1 !important;
+      background: rgba(6, 7, 10, 0.92);
+      border-bottom-color: var(--border-silver-bright);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.78);
+    }
+
+    header.navbar::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(226, 232, 240, 0.35), transparent);
+      pointer-events: none;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .nav-logo-pill {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+      padding: 6px 16px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.5);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+    }
+
+    .nav-logo-pill:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 30px rgba(226, 232, 240, 0.2), 0 0 0 1.5px #fff;
+    }
+
+    .nav-logo-img {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+      position: relative;
+      padding: 5px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(226, 232, 240, 0.08);
+    }
+
+    /* Liquid sliding highlight pill between nav items */
+    .nav-glider {
+      position: absolute;
+      top: 5px;
+      bottom: 5px;
+      left: 0;
+      width: 0;
+      opacity: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(248, 250, 252, 0.16) 0%, rgba(148, 163, 184, 0.08) 100%);
+      border: 1px solid rgba(248, 250, 252, 0.24);
+      box-shadow: 0 4px 18px rgba(226, 232, 240, 0.12);
+      pointer-events: none;
+      transition:
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        width 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: 0;
+    }
+
+    .nav-links li {
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav-links a {
+      color: var(--silver-mid);
+      text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      padding: 8px 16px;
+      border-radius: 999px;
+      display: inline-block;
+      transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active-nav {
+      color: #fff;
+    }
+
+    /* ==========================================
+       BLENDED SCROLL REVEAL & FLUID TAB FADING
+       ========================================== */
+    .reveal-blend {
+      opacity: 0;
+      transform: translateY(26px) scale(0.99);
+      filter: blur(5px);
+      transition:
+        opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform, filter;
+    }
+
+    .reveal-blend.in-view {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0px);
+    }
+
+    /* Smooth cross-fade state for interactive grids, summaries, and forms */
+    .fluid-fade-target {
+      transition:
+        opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .fluid-fade-target.fading-out {
+      opacity: 0;
+      transform: translateY(8px) scale(0.99);
+      filter: blur(4px);
+    }
+
+    /* Subtle whole-page blend during nav-button scroll transitions */
+    main, section.sec, section.hero {
+      transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    body.is-nav-gliding section.sec,
+    body.is-nav-gliding section.hero {
+      opacity: 0.82;
+      filter: blur(1.5px);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-magenta {
+      background: var(--grad-cta);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 28px -6px rgba(225, 25, 104, 0.45);
+    }
+
+    .btn-magenta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px -6px rgba(225, 25, 104, 0.65);
+      filter: brightness(1.08);
+    }
+
+    .btn-silver-outline {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--silver-bright);
+      border: 1px solid var(--border-silver-bright);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-silver-outline:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: #fff;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -8px rgba(226, 232, 240, 0.25);
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--silver-mid);
+      border: 1px solid var(--border-silver);
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border-color: var(--border-silver-bright);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================
+       SMOKY GLASS CARD UTILITY (WITH SILVER SHIMMER)
+       ========================================== */
+    .smoky-card {
+      background: var(--grad-smoky-surface);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border: 1px solid var(--border-silver);
+      box-shadow: var(--shadow-obsidian);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Specular Silver Top Edge Shimmer on Cards */
+    .smoky-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 5%, rgba(241, 245, 249, 0.42) 50%, transparent 95%);
+      pointer-events: none;
+    }
+
+    /* ==========================================
+       HERO SECTION WITH INTERACTIVE SOUNDWAVE
+       ========================================== */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      padding: 68px 5% 88px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    /* Smoky Silver & Subtle Brand Ambient Glows */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(125px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .orb-silver-top {
+      width: 680px;
+      height: 360px;
+      background: rgba(203, 213, 225, 0.11);
+      top: -120px;
+      left: 25%;
+    }
+
+    .orb-magenta {
+      width: 450px;
+      height: 450px;
+      background: rgba(225, 25, 104, 0.11);
+      top: 10%;
+      left: -140px;
+    }
+
+    .orb-cyan {
+      width: 460px;
+      height: 460px;
+      background: rgba(13, 184, 204, 0.10);
+      bottom: -120px;
+      right: -120px;
+    }
+
+    #hero-wave-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.48;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      max-width: 1320px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eyebrow-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-silver-bright);
+      color: var(--silver-mid);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow-tag i {
+      color: var(--cyan-glow);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 5.2vw, 4.65rem);
+      font-weight: 800;
+      line-height: 1.04;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+
+    .text-silver-shimmer {
+      background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 40%, #94A3B8 70%, #F8FAFC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #FF3B8B 0%, #E2E8F0 50%, #22D8ED 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-lead {
+      font-size: clamp(1.04rem, 1.3vw, 1.18rem);
+      color: var(--silver-muted);
+      max-width: 610px;
+      margin-bottom: 30px;
+      line-height: 1.75;
+    }
+
+    /* University Health Spotlight Callout inside Hero */
+    .uh-hero-callout {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(18, 20, 27, 0.78);
+      border: 1px solid var(--border-silver-bright);
+      border-left: 3px solid var(--cyan-glow);
+      padding: 16px 20px;
+      border-radius: 16px;
+      margin-bottom: 34px;
+      max-width: 600px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .uh-icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-silver);
+      color: var(--cyan-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .uh-callout-text strong {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    .uh-callout-text span {
+      font-size: 0.84rem;
+      color: var(--silver-muted);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 42px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-silver);
+    }
+
+    .stat-item .stat-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .stat-item .stat-val span {
+      color: var(--silver-mid);
+    }
+
+    .stat-item .stat-lbl {
+      font-size: 0.74rem;
+      color: var(--silver-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    /* Right Hero Card: Smoky Glass Brand Stage & Playable Studio Chimes */
+    .hero-visual-card {
+      border-radius: 26px;
+      padding: 30px;
+    }
+
+    .hero-logo-stage {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+      border-radius: 18px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08), 0 18px 40px rgba(0, 0, 0, 0.65);
+      margin-bottom: 22px;
+    }
+
+    .hero-logo-stage img {
+      max-width: 100%;
+      height: 140px;
+      object-fit: contain;
+    }
+
+    /* Interactive Mini Studio Synth / Heartbeat Chimes */
+    .soundcheck-box {
+      background: rgba(7, 8, 12, 0.85);
+      border: 1px solid var(--border-silver);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .soundcheck-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 0.78rem;
+      color: var(--silver-muted);
+    }
+
+    .soundcheck-header strong {
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chord-pads {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .chord-btn {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+      border: 1px solid var(--border-silver);
+      border-top-color: rgba(255, 255, 255, 0.25);
+      border-radius: 12px;
+      padding: 13px 6px;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.18s ease;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .chord-btn:hover, .chord-btn.playing {
+      background: linear-gradient(145deg, rgba(226, 232, 240, 0.22), rgba(225, 25, 104, 0.35));
+      border-color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(226, 232, 240, 0.25);
+    }
+
+    .chord-note {
+      font-size: 0.98rem;
+      font-weight: 800;
+    }
+
+    .chord-emotion {
+      font-size: 0.63rem;
+      color: var(--silver-mid);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ==========================================
+       SECTION COMMON STYLES
+       ========================================== */
+    section.sec {
+      padding: 100px 5%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .sec-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 64px;
+    }
+
+    .sec-title {
+      font-size: clamp(2.2rem, 3.8vw, 3.3rem);
+      font-weight: 800;
+      line-height: 1.14;
+      margin-bottom: 18px;
+      color: #fff;
+      text-wrap: balance;
+    }
+
+    .sec-sub {
+      font-size: 1.06rem;
+      color: var(--silver-muted);
+      text-wrap: balance;
+    }
+
+    /* ==========================================
+       UNIVERSITY HEALTH SPOTLIGHT & HOSPITAL PARTNERS
+       ========================================== */
+    .partners-sec {
+      background: rgba(8, 9, 13, 0.75);
+      border-top: 1px solid var(--border-silver);
+      border-bottom: 1px solid var(--border-silver);
+    }
+
+    .uh-spotlight-banner {
+      border-radius: 26px;
+      padding: 44px;
+      margin-bottom: 56px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 36px;
+      align-items: center;
+      border: 1px solid var(--border-silver-bright);
+    }
+
+    .uh-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .uh-spotlight-banner h3 {
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      margin-bottom: 14px;
+      line-height: 1.18;
+    }
+
+    .uh-spotlight-banner p {
+      color: var(--silver-muted);
+      font-size: 1.02rem;
+      margin-bottom: 24px;
+    }
+
+    .uh-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .uh-chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-silver);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--silver-bright);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .uh-chip i {
+      color: var(--cyan-glow);
+    }
+
+    .uh-visual-seal {
+      background: rgba(5, 6, 9, 0.85);
+      border: 1px solid var(--border-silver);
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .uh-visual-seal .seal-icon {
+      width: 68px;
+      height: 68px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03));
+      border: 1px solid var(--border-silver-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.85rem;
+      color: #fff;
+      margin: 0 auto 16px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+    }
+
+    .city-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .city-tab {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-silver);
+      color: var(--silver-muted);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 11px 24px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .city-tab.active, .city-tab:hover {
+      background: linear-gradient(135deg, #F8FAFC 0%, #CBD5E1 100%);
+      color: #050507;
+      border-color: #fff;
+      box-shadow: 0 8px 25px rgba(226, 232, 240, 0.2);
+    }
+
+    .hospital-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .hospital-card {
+      border-radius: 20px;
+      padding: 26px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hospital-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-silver-bright);
+    }
+
+    .hospital-card.featured-partner {
+      border: 1px solid rgba(226, 232, 240, 0.38);
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.09) 0%, rgba(12, 13, 18, 0.92) 100%);
+    }
+
+    .hosp-region-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 11px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+      width: fit-content;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hosp-region-tag.tx {
+      background: rgba(225, 25, 104, 0.12);
+      color: #FDA4AF;
+    }
+
+    .hosp-region-tag.il {
+      background: rgba(13, 184, 204, 0.12);
+      color: #A5F3FC;
+    }
+
+    .hospital-card h4 {
+      font-size: 1.16rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .hospital-card p {
+      font-size: 0.88rem;
+      color: var(--silver-muted);
+    }
+
+    /* ==========================================
+       MISSION & WHO WE ARE SECTION
+       ========================================== */
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .mission-visual {
+      position: relative;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid var(--border-silver-bright);
+      box-shadow: var(--shadow-obsidian);
+    }
+
+    .mission-visual img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
+      filter: contrast(1.05) brightness(0.92);
+    }
+
+    .mission-quote-float {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+      background: rgba(7, 8, 12, 0.9);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--border-silver-bright);
+      border-left: 3px solid var(--silver-bright);
+      padding: 20px 24px;
+      border-radius: 16px;
+    }
+
+    .mission-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .pillar-box {
+      padding: 22px;
+      border-radius: 18px;
+    }
+
+    .pillar-box i {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .pillar-box h4 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .pillar-box p {
+      font-size: 0.86rem;
+      color: var(--silver-muted);
+    }
+
+    /* ==========================================
+       WHAT WE OFFER (PROGRAMS & SERVICES)
+       ========================================== */
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .program-card {
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--border-silver-bright);
+    }
+
+    .program-img-wrap {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .program-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      filter: contrast(1.05) brightness(0.9);
+    }
+
+    .program-card:hover .program-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .program-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(6, 7, 10, 0.88);
+      backdrop-filter: blur(10px);
+      color: var(--silver-bright);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.73rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border-silver-bright);
+      letter-spacing: 0.04em;
+    }
+
+    .program-body {
+      padding: 30px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .program-body h3 {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .program-body p {
+      color: var(--silver-muted);
+      font-size: 0.93rem;
+      margin-bottom: 20px;
+    }
+
+    .program-features {
+      list-style: none;
+      margin-bottom: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .program-features li {
+      font-size: 0.86rem;
+      color: var(--silver-mid);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .program-features li i {
+      color: var(--silver-bright);
+      font-size: 0.78rem;
+    }
+
+    /* ==========================================
+       INTERACTIVE SPONSORSHIP & DONATION CALCULATOR
+       ========================================== */
+    .donate-sec {
+      background: rgba(8, 9, 13, 0.82);
+      border-top: 1px solid var(--border-silver);
+      border-bottom: 1px solid var(--border-silver);
+    }
+
+    .donate-container {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .tier-card {
+      background: rgba(12, 14, 19, 0.8);
+      border: 1.5px solid var(--border-silver);
+      border-radius: 18px;
+      padding: 22px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: left;
+      position: relative;
+    }
+
+    .tier-card:hover {
+      border-color: var(--border-silver-bright);
+    }
+
+    .tier-card.active {
+      border-color: #fff;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(15, 17, 24, 0.95) 100%);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.7), 0 0 20px rgba(226, 232, 240, 0.12);
+    }
+
+    .tier-amount {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .tier-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--silver-bright);
+      margin-bottom: 4px;
+    }
+
+    .tier-desc {
+      font-size: 0.82rem;
+      color: var(--silver-muted);
+    }
+
+    .custom-amount-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(12, 14, 19, 0.85);
+      border: 1px solid var(--border-silver);
+      padding: 14px 20px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+    }
+
+    .custom-amount-bar input {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      width: 100%;
+      outline: none;
+    }
+
+    .freq-pills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .freq-btn {
+      background: rgba(12, 14, 19, 0.85);
+      border: 1px solid var(--border-silver);
+      color: var(--silver-muted);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .freq-btn.active {
+      background: linear-gradient(135deg, #F8FAFC 0%, #CBD5E1 100%);
+      color: #050507;
+      border-color: #fff;
+    }
+
+    .donate-summary-box {
+      border-radius: 24px;
+      padding: 36px;
+      position: sticky;
+      top: 100px;
+    }
+
+    .summary-impact-Number {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1;
+      background: var(--grad-silver-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 8px 0 12px;
+    }
+
+    .fee-toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-silver);
+      border-radius: 12px;
+      margin: 20px 0;
+      cursor: pointer;
+      font-size: 0.86rem;
+      color: var(--silver-mid);
+    }
+
+    .fee-toggle-row input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--magenta);
+      cursor: pointer;
+    }
+
+    .venmo-card {
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-silver);
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    /* ==========================================
+       BOARD OF DIRECTORS (OUR TEAM)
+       ========================================== */
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .board-card {
+      border-radius: 24px;
+      transition: all 0.35s ease;
+    }
+
+    .board-card:hover {
+      transform: translateY(-7px);
+      border-color: var(--border-silver-bright);
+    }
+
+    .board-photo-wrap {
+      aspect-ratio: 3 / 4;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      background: #0a0b0f;
+      border-bottom: 1px solid var(--border-silver);
+    }
+
+    .board-photo-wrap::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 28%;
+      background: linear-gradient(to top, rgba(9, 10, 15, 0.85) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .board-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.5s ease;
+    }
+
+    .board-card:hover .board-photo-wrap img {
+      transform: scale(1.04);
+    }
+
+    .board-info {
+      padding: 28px;
+    }
+
+    .board-role {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--silver-mid);
+      margin-bottom: 6px;
+    }
+
+    .board-name {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .board-bio {
+      font-size: 0.88rem;
+      color: var(--silver-muted);
+    }
+
+    /* ==========================================
+       FAQ ACCORDION
+       ========================================== */
+    .faq-list {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      border-radius: 18px;
+      transition: border-color 0.25s ease;
+    }
+
+    .faq-item.open {
+      border-color: var(--border-silver-bright);
+    }
+
+    .faq-q {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: #fff;
+      padding: 22px 26px;
+      text-align: left;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.08rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-q i {
+      color: var(--silver-mid);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-q i {
+      transform: rotate(180deg);
+      color: #fff;
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      padding: 0 26px;
+      color: var(--silver-muted);
+      font-size: 0.95rem;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 320px;
+      padding-bottom: 24px;
+    }
+
+    /* ==========================================
+       ENROLLMENT & CONTACT PORTAL
+       ========================================== */
+    .portal-box {
+      border-radius: 26px;
+    }
+
+    .portal-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: rgba(5, 6, 9, 0.75);
+      border-bottom: 1px solid var(--border-silver);
+    }
+
+    .portal-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--silver-muted);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.98rem;
+      font-weight: 700;
+      padding: 20px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .portal-tab-btn.active {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+      border-bottom-color: #fff;
+    }
+
+    .portal-content {
+      padding: 44px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--silver-mid);
+    }
+
+    .form-control {
+      background: rgba(6, 7, 10, 0.85);
+      border: 1px solid var(--border-silver);
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      border-color: #fff;
+    }
+
+    /* ==========================================
+       FOOTER
+       ========================================== */
+    footer {
+      background: #020204;
+      border-top: 1px solid var(--border-silver);
+      padding: 72px 5% 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 44px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border-silver);
+    }
+
+    .footer-col h4 {
+      font-size: 1rem;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--silver-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .newsletter-mini {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .newsletter-mini input {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-silver);
+      border-radius: 999px;
+      padding: 11px 16px;
+      color: #fff;
+      outline: none;
+    }
+
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 28px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.84rem;
+      color: var(--silver-dim);
+    }
+
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: rgba(15, 17, 23, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-silver-bright);
+      color: #fff;
+      padding: 16px 24px;
+      border-radius: 16px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.85);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid, .uh-spotlight-banner, .mission-grid, .donate-container {
+        grid-template-columns: 1fr;
+      }
+      .programs-grid, .board-grid {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header.navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 4%;
+      }
+      header.navbar.nav-scrolled {
+        padding: 7px 4%;
+      }
+      .nav-logo-img {
+        height: 36px;
+      }
+      .nav-logo-pill {
+        padding: 5px 12px;
+      }
+      .nav-actions .btn {
+        padding: 9px 14px;
+        font-size: 0.78rem;
+      }
+      .nav-actions .btn-silver-outline {
+        display: none;
+      }
+      .nav-links {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        justify-content: flex-start;
+        gap: 4px;
+        padding: 4px;
+      }
+      .nav-links::-webkit-scrollbar {
+        display: none;
+      }
+      .nav-links a {
+        white-space: nowrap;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+      }
+      .hero {
+        padding: 36px 5% 60px;
+      }
+      .hero-visual-card, .uh-spotlight-banner, .donate-summary-box, .portal-box {
+        padding: 22px 18px;
+      }
+      .hero-stats, .mission-pillars {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .form-grid, .tier-grid, .portal-tabs, .footer-grid, .mission-pillars {
+        grid-template-columns: 1fr;
+      }
+      .chord-btn .chord-name {
+        font-size: 0.78rem;
+      }
+      .chord-btn .chord-mood {
+        font-size: 0.58rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       TOP CLINICAL PARTNERSHIP ANNOUNCEMENT BAR
+       ========================================== -->
+  <div class="top-bar">
+    <a href="#hospital-network" class="announcement-pill">
+      <span class="badge-live">New Partnership</span>
+      <span>Proudly partnered with <strong style="color: #fff;">University Health Hospital in San Antonio, TX</strong> to bring healing music education to pediatric patients &rarr;</span>
+    </a>
+  </div>
+
+  <!-- ==========================================
+       STICKY NAVIGATION BAR (WITH LOGO #1)
+       ========================================== -->
+  <header class="navbar">
+    <a href="#" class="nav-brand">
+      <div class="nav-logo-pill">
+        <img src="logo1_light.png" alt="Music For All Hearts Logo" class="nav-logo-img" />
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#mission">Our Mission</a></li>
+      <li><a href="#hospital-network">Hospital Network</a></li>
+      <li><a href="#programs">What We Offer</a></li>
+      <li><a href="#board">Our Board</a></li>
+      <li><a href="#faqs">FAQs</a></li>
+      <li><a href="#enroll-portal">Enroll</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="#enroll-portal" class="btn btn-silver-outline">
+        <i class="fa-solid fa-music"></i> Enroll Free
+      </a>
+      <a href="#donate" class="btn btn-magenta">
+        <i class="fa-solid fa-heart"></i> Sponsor a Student
+      </a>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero">
+    <div class="orb orb-silver-top"></div>
+    <div class="orb orb-magenta"></div>
+    <div class="orb orb-cyan"></div>
+    <canvas id="hero-wave-canvas"></canvas>
+
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow-tag">
+          <i class="fa-solid fa-shield-heart"></i> IRS Recognized 501(c)(3) Non-Profit &bull; San Antonio &amp; Chicago
+        </div>
+
+        <h1>
+          Removing Barriers to <span class="text-silver-shimmer">Making Music.</span>
+        </h1>
+
+        <p class="hero-lead">
+          When words fail, music speaks. We empower youth ages <strong style="color: #fff;">4 to 18</strong> with <strong style="color: #fff;">100% free private &amp; group music lessons</strong> in voice, piano, and guitar—transforming young lives across communities and pediatric hospitals.
+        </p>
+
+        <!-- University Health San Antonio Spotlight Callout -->
+        <div class="uh-hero-callout">
+          <div class="uh-icon-box">
+            <i class="fa-solid fa-hospital-user"></i>
+          </div>
+          <div class="uh-callout-text">
+            <strong>Recently Partnered with University Health Hospital (San Antonio)</strong>
+            <span>Bringing live bedside &amp; group music therapy and mentorship to pediatric patients in South Texas.</span>
+          </div>
+        </div>
+
+        <div class="hero-cta-row">
+          <a href="#donate" class="btn btn-magenta" style="padding: 16px 34px; font-size: 1rem;">
+            <i class="fa-solid fa-hand-holding-heart"></i> Sponsor a Student Today
+          </a>
+          <a href="#enroll-portal" class="btn btn-silver-outline" style="padding: 16px 32px; font-size: 1rem;">
+            <i class="fa-solid fa-user-graduate"></i> Apply for Free Lessons
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-val">100<span>%</span></div>
+            <div class="stat-lbl">Free For Families</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">4–18</div>
+            <div class="stat-lbl">Student Ages Served</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">8<span>+</span></div>
+            <div class="stat-lbl">Pediatric Hospitals</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">30<span>+ Yrs</span></div>
+            <div class="stat-lbl">Board Expertise</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Brand Stage + Interactive Studio Chime Pad -->
+      <div class="hero-visual-card smoky-card">
+        <div class="hero-logo-stage">
+          <img src="logo1_light.png" alt="Music For All Hearts Official Brand Mark" />
+        </div>
+
+        <div class="soundcheck-box">
+          <div class="soundcheck-header">
+            <strong><i class="fa-solid fa-wave-square" style="color: var(--silver-bright);"></i> Interactive Studio Piano Chimes</strong>
+            <span>Click any chord to play &amp; pulse</span>
+          </div>
+          <div class="chord-pads">
+            <button class="chord-btn" onclick="playHeartChord([261.63, 329.63, 392.00, 493.88], this)">
+              <span class="chord-note">Cmaj7</span>
+              <span class="chord-emotion">Hope</span>
+            </button>
+            <button class="chord-btn" onclick="playHeartChord([349.23, 440.00, 523.25, 659.25], this)">
+              <span class="chord-note">Fmaj7</span>
+              <span class="chord-emotion">Warmth</span>
+            </button>
+            <button class="chord-btn" onclick="playHeartChord([220.00, 261.63, 329.63, 392.00], this)">
+              <span class="chord-note">Am7</span>
+              <span class="chord-emotion">Courage</span>
+            </button>
+            <button class="chord-btn" onclick="playHeartChord([293.66, 349.23, 440.00, 523.25], this)">
+              <span class="chord-note">Dm9</span>
+              <span class="chord-emotion">Healing</span>
+            </button>
+            <button class="chord-btn" onclick="playHeartChord([392.00, 493.88, 587.33, 659.25], this)">
+              <span class="chord-note">G6</span>
+              <span class="chord-emotion">Joy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURED PARTNERSHIP & HOSPITAL NETWORK
+       ========================================== -->
+  <section id="hospital-network" class="sec partners-sec">
+    <div class="container">
+      <!-- University Health Featured Partnership Banner -->
+      <div class="uh-spotlight-banner smoky-card">
+        <div>
+          <div class="uh-badge-row">
+            <span class="badge-live">Featured Clinical Partner</span>
+            <span style="color: var(--silver-mid); font-weight: 700; font-size: 0.85rem;">San Antonio, Texas</span>
+          </div>
+          <h3>Recently Partnered with <span class="text-silver-shimmer">University Health Hospital</span> in San Antonio</h3>
+          <p>
+            Music For All Hearts is proud to announce our newest clinical community partnership with <strong style="color: #fff;">University Health Hospital in San Antonio</strong>. Together, we bring compassionate, compliant in-person group sessions and 1-on-1 musical mentorship directly to young patients and families navigating health challenges.
+          </p>
+          <div class="uh-highlights">
+            <span class="uh-chip"><i class="fa-solid fa-notes-medical"></i> Pediatric Group Music Sessions</span>
+            <span class="uh-chip"><i class="fa-solid fa-heart-pulse"></i> Bedside &amp; Virtual Instruction</span>
+            <span class="uh-chip"><i class="fa-solid fa-shield-virus"></i> Full Regional Health &amp; Safety Compliance</span>
+          </div>
+        </div>
+
+        <div class="uh-visual-seal">
+          <div class="seal-icon">
+            <i class="fa-solid fa-hand-holding-medical"></i>
+          </div>
+          <h4 style="font-size: 1.3rem; margin-bottom: 6px; color: #fff;">University Health</h4>
+          <p style="color: var(--silver-mid); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">
+            Pediatric Hospital &bull; San Antonio, TX
+          </p>
+          <p style="font-size: 0.86rem; color: var(--silver-muted); margin-bottom: 18px;">
+            Want to collaborate on a hospital outreach session or sponsor instruments for pediatric patients?
+          </p>
+          <a href="#enroll-portal" onclick="selectPortalTab('partner')" class="btn btn-silver-outline" style="width: 100%;">
+            Partner With Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Full Pediatric Hospital Network -->
+      <div class="sec-header" style="margin-bottom: 36px;">
+        <div class="eyebrow-tag"><i class="fa-solid fa-stethoscope"></i> Community Partners</div>
+        <h2 class="sec-title">Our Pediatric Hospital Network</h2>
+        <p class="sec-sub">
+          Serving children and families across <strong style="color:#fff;">Texas</strong> and <strong style="color:#fff;">Illinois</strong> in collaboration with premier pediatric medical centers.
+        </p>
+      </div>
+
+      <div class="city-tabs">
+        <button class="city-tab active" onclick="filterHospitals('all', this)">All Partner Hospitals (8)</button>
+        <button class="city-tab" onclick="filterHospitals('tx', this)">San Antonio, TX (4)</button>
+        <button class="city-tab" onclick="filterHospitals('il', this)">Chicago, IL (4)</button>
+      </div>
+
+      <div class="hospital-grid" id="hospital-grid">
+        <!-- San Antonio Hospitals -->
+        <div class="hospital-card smoky-card featured-partner" data-region="tx">
+          <div>
+            <span class="hosp-region-tag tx"><i class="fa-solid fa-star"></i> San Antonio, TX &bull; Recent Partner</span>
+            <h4>University Health's Pediatric Hospital</h4>
+            <p>Featured clinical partner hosting compassionate youth music education, creative expression, and healing ensemble sessions in San Antonio.</p>
+          </div>
+          <div style="margin-top: 18px; font-size: 0.8rem; color: var(--silver-bright); font-weight: 700;">
+            <i class="fa-solid fa-circle-check" style="color: var(--cyan-glow);"></i> Active Partnership Spotlight
+          </div>
+        </div>
+
+        <div class="hospital-card smoky-card" data-region="tx">
+          <div>
+            <span class="hosp-region-tag tx"><i class="fa-solid fa-location-dot"></i> San Antonio, TX</span>
+            <h4>Methodist Children's Hospital</h4>
+            <p>Supporting pediatric patients and families with uplifting musical mentorship and creative outlet programs.</p>
+          </div>
+        </div>
+
+        <div class="hospital-card smoky-card" data-region="tx">
+          <div>
+            <span class="hosp-region-tag tx"><i class="fa-solid fa-location-dot"></i> San Antonio, TX</span>
+            <h4>Texas Children's Hospital – San Antonio</h4>
+            <p>Expanding access to music education and emotional resilience for children receiving specialized care.</p>
+          </div>
+        </div>
+
+        <div class="hospital-card smoky-card" data-region="tx">
+          <div>
+            <span class="hosp-region-tag tx"><i class="fa-solid fa-location-dot"></i> San Antonio, TX</span>
+            <h4>Wilford Hall Ambulatory Surgical Center</h4>
+            <p>Serving military and San Antonio area families through accessible youth music outreach.</p>
+          </div>
+        </div>
+
+        <!-- Chicago Hospitals -->
+        <div class="hospital-card smoky-card" data-region="il">
+          <div>
+            <span class="hosp-region-tag il"><i class="fa-solid fa-location-dot"></i> Chicago, IL</span>
+            <h4>Ann &amp; Robert H. Lurie Children's Hospital of Chicago</h4>
+            <p>Empowering young patients in Chicago through restorative music lessons and expressive arts.</p>
+          </div>
+        </div>
+
+        <div class="hospital-card smoky-card" data-region="il">
+          <div>
+            <span class="hosp-region-tag il"><i class="fa-solid fa-location-dot"></i> Chicago, IL</span>
+            <h4>UChicago Medicine Comer Children's Hospital</h4>
+            <p>Fostering creativity, confidence, and joy for children and families through guided musical instruction.</p>
+          </div>
+        </div>
+
+        <div class="hospital-card smoky-card" data-region="il">
+          <div>
+            <span class="hosp-region-tag il"><i class="fa-solid fa-location-dot"></i> Chicago, IL</span>
+            <h4>Rush University Medical Center</h4>
+            <p>Bridging healthcare and the arts with philanthropic music educators and performers.</p>
+          </div>
+        </div>
+
+        <div class="hospital-card smoky-card" data-region="il">
+          <div>
+            <span class="hosp-region-tag il"><i class="fa-solid fa-location-dot"></i> Oak Lawn / Chicago, IL</span>
+            <h4>Advocate Children's Hospital – Oak Lawn</h4>
+            <p>Creating nurturing musical opportunities for youth facing health and socioeconomic barriers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       OUR MISSION ("WHO WE ARE")
+       ========================================== -->
+  <section id="mission" class="sec">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-visual">
+          <img src="https://images.squarespace-cdn.com/content/v1/6771b3f14cb2a27bee5c732e/1735695873207-5GXBZ56Y5P9TW9RKHD8D/unsplash-image-zFSo6bnZJTw.jpg" alt="Students learning music with mentor" />
+          <div class="mission-quote-float">
+            <p class="serif-italic" style="font-size: 1.15rem; color: #fff; margin-bottom: 6px;">
+              &ldquo;Imagine a world where every child has the chance to use music as a gateway to explore and release their emotions—where, when words fail, music speaks.&rdquo;
+            </p>
+            <span style="font-size: 0.78rem; color: var(--silver-mid); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">
+              &mdash; Music For All Hearts Mission
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <div class="eyebrow-tag"><i class="fa-solid fa-compass"></i> Who We Are &amp; Why We Exist</div>
+          <h2 class="sec-title" style="text-align: left;">Every Child Deserves the Power of <span class="text-silver-shimmer">Musical Expression.</span></h2>
+          <p style="color: var(--silver-muted); margin-bottom: 18px; font-size: 1.03rem;">
+            At <strong style="color: #fff;">Music For All Hearts</strong>, we envision a future where young people can pursue their passion for music without the weight of financial burdens holding them back. We believe every child—regardless of socioeconomic background or health-related challenges—deserves the opportunity to learn, express, and thrive.
+          </p>
+          <p style="color: var(--silver-muted); margin-bottom: 24px; font-size: 1.03rem;">
+            By providing <strong style="color: #fff;">free music lessons</strong>, we bridge the gap for families facing hardship. Our dedicated instructors are accomplished performers and philanthropic mentors who foster resilience, empathy, and lifelong confidence.
+          </p>
+
+          <div class="mission-pillars">
+            <div class="pillar-box smoky-card">
+              <i class="fa-solid fa-unlock-keyhole" style="color: var(--silver-bright);"></i>
+              <h4>Zero Financial Barriers</h4>
+              <p>100% tuition-free lesson packages redeemed throughout the calendar year for qualifying families.</p>
+            </div>
+            <div class="pillar-box smoky-card">
+              <i class="fa-solid fa-laptop-medical" style="color: var(--cyan-glow);"></i>
+              <h4>Virtual &amp; In-Person</h4>
+              <p>Flexible 1-on-1 lessons via Zoom/Skype, case-by-case in-person studio sessions, and hospital group classes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WHAT WE OFFER (PROGRAMS)
+       ========================================== -->
+  <section id="programs" class="sec">
+    <div class="container">
+      <div class="sec-header">
+        <div class="eyebrow-tag"><i class="fa-solid fa-guitar"></i> What We Offer</div>
+        <h2 class="sec-title">Comprehensive, Heart-Centered <span class="text-silver-shimmer">Music Programs</span></h2>
+        <p class="sec-sub">
+          Serving students aged 4 to 18 in <strong style="color: #fff;">Voice, Piano, and Guitar</strong>. Students can even explore more than one musical interest area using their annual lesson allotment!
+        </p>
+      </div>
+
+      <div class="programs-grid">
+        <!-- Vocal Program -->
+        <div class="program-card smoky-card">
+          <div class="program-img-wrap">
+            <img src="https://images.squarespace-cdn.com/content/v1/6771b3f14cb2a27bee5c732e/1735687082103-THKE1UEHXT4HDSENMII7/unsplash-image-uAZyrd0qDBg.jpg" alt="Vocal Lessons" />
+            <span class="program-badge">12-Week Core Course</span>
+          </div>
+          <div class="program-body">
+            <div>
+              <h3>Vocal Lessons</h3>
+              <p>
+                Designed to empower students with a comprehensive foundation in vocal technique while unlocking confidence and stage presence in a friendly, supportive environment.
+              </p>
+              <ul class="program-features">
+                <li><i class="fa-solid fa-check"></i> Up to 60-minute personalized sessions</li>
+                <li><i class="fa-solid fa-check"></i> Breath support, pitch control &amp; articulation</li>
+                <li><i class="fa-solid fa-check"></i> Performance etiquette &amp; stage confidence</li>
+                <li><i class="fa-solid fa-check"></i> Tailored 1-on-1 feedback for every singer</li>
+              </ul>
+            </div>
+            <a href="#enroll-portal" class="btn btn-magenta" style="width: 100%;">Enroll in Voice</a>
+          </div>
+        </div>
+
+        <!-- Instrumental Program -->
+        <div class="program-card smoky-card">
+          <div class="program-img-wrap">
+            <img src="https://images.squarespace-cdn.com/content/v1/6771b3f14cb2a27bee5c732e/1743017916771-7YCCX47ESWKNPFWJXZYF/unsplash-image-je240KkJIuA.jpg" alt="Piano and Guitar Lessons" />
+            <span class="program-badge">Beginner &amp; Intermediate</span>
+          </div>
+          <div class="program-body">
+            <div>
+              <h3>Instrumental (Piano &amp; Guitar)</h3>
+              <p>
+                Free instrumental lessons for beginners and intermediates! No prior experience is required—just excitement to learn and a 61+ key keyboard, piano, or guitar.
+              </p>
+              <ul class="program-features">
+                <li><i class="fa-solid fa-check"></i> Scales, chords, sight-reading &amp; music theory</li>
+                <li><i class="fa-solid fa-check"></i> Weekly sessions for steady growth</li>
+                <li><i class="fa-solid fa-check"></i> No prior musical experience needed</li>
+                <li><i class="fa-solid fa-check"></i> Option to study multiple instruments</li>
+              </ul>
+            </div>
+            <a href="#enroll-portal" class="btn btn-silver-outline" style="width: 100%;">Enroll in Piano / Guitar</a>
+          </div>
+        </div>
+
+        <!-- Group & Hospital Courses -->
+        <div class="program-card smoky-card">
+          <div class="program-img-wrap">
+            <img src="https://images.squarespace-cdn.com/content/v1/6771b3f14cb2a27bee5c732e/1735696077264-7HZEZRCZEUU5LF6F9MA5/unsplash-image-CTZhGbSxWLI.jpg" alt="Group Courses and Hospital Outreach" />
+            <span class="program-badge">Hospital &amp; Community</span>
+          </div>
+          <div class="program-body">
+            <div>
+              <h3>Group &amp; Hospital Courses</h3>
+              <p>
+                Class-style voice and instrumental sessions designed to foster collaboration, teamwork, and camaraderie across hospitals, community centers, and after-school programs.
+              </p>
+              <ul class="program-features">
+                <li><i class="fa-solid fa-check"></i> Active at University Health &amp; partner hospitals</li>
+                <li><i class="fa-solid fa-check"></i> Ensemble performances &amp; peer support</li>
+                <li><i class="fa-solid fa-check"></i> Inclusive for all skill levels &amp; ages 4–18</li>
+                <li><i class="fa-solid fa-check"></i> Full health &amp; safety protocol compliance</li>
+              </ul>
+            </div>
+            <a href="#enroll-portal" onclick="selectPortalTab('partner')" class="btn btn-glass" style="width: 100%;">Request Group Program</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CEO Quote Banner -->
+      <div class="smoky-card" style="margin-top: 48px; border-radius: 22px; padding: 32px 40px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap;">
+        <img src="abraham_cruz_studio.jpg" alt="Abraham Isai Cruz" style="width: 82px; height: 82px; border-radius: 50%; object-fit: cover; object-position: center 18%; border: 2px solid var(--silver-bright); box-shadow: 0 8px 20px rgba(0,0,0,0.6);" />
+        <div style="flex: 1; min-width: 260px;">
+          <p class="serif-italic" style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">
+            &ldquo;Our commitment to creating a nurturing and inclusive environment sets our program apart, fostering both individual growth and a sense of community among students. Join us as we encourage a lifelong love of music!&rdquo;
+          </p>
+          <span style="font-size: 0.85rem; color: var(--silver-mid); font-weight: 700;">
+            &mdash; Abraham Isai Cruz, President &amp; CEO of Music For All Hearts
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       INTERACTIVE SPONSOR A STUDENT / DONATE
+       ========================================== -->
+  <section id="donate" class="sec donate-sec">
+    <div class="container">
+      <div class="sec-header">
+        <div class="eyebrow-tag"><i class="fa-solid fa-hand-holding-dollar"></i> Support Our 501(c)(3) Mission</div>
+        <h2 class="sec-title">Sponsor a Student.<br /><span class="text-silver-shimmer">Transform a Life.</span></h2>
+        <p class="sec-sub">
+          Donations are the lifeblood of our organization—funding free lessons, providing instruments, and powering our pediatric hospital outreach in San Antonio and Chicago.
+        </p>
+      </div>
+
+      <div class="donate-container">
+        <div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 16px;">1. Select Your Sponsorship Impact</h3>
+          <div class="tier-grid">
+            <div class="tier-card" onclick="selectDonationTier(50, '1 Full Private Music Lesson', 'Covers a 60-minute 1-on-1 voice, piano, or guitar mentorship session.', this)">
+              <div class="tier-amount">$50</div>
+              <div class="tier-title">1 Music Lesson</div>
+              <div class="tier-desc">Donate one full 60-minute private lesson for a student in need.</div>
+            </div>
+
+            <div class="tier-card active" onclick="selectDonationTier(200, '1 Full Month of Music Lessons', 'Funds an entire month of weekly 1-on-1 instruction & personalized feedback.', this)">
+              <div class="tier-amount">$200</div>
+              <div class="tier-title">1 Month of Lessons</div>
+              <div class="tier-desc">Donate a full month of weekly music education and mentorship.</div>
+            </div>
+
+            <div class="tier-card" onclick="selectDonationTier(1000, '6 Months of Music Education', 'Sponsors a full half-year semester of transformative musical training.', this)">
+              <div class="tier-amount">$1,000</div>
+              <div class="tier-title">6 Months of Lessons</div>
+              <div class="tier-desc">Fund a full 6-month journey of vocal or instrumental mastery.</div>
+            </div>
+
+            <div class="tier-card" onclick="selectDonationTier(2000, 'Full-Year Student Scholarship', 'Sponsors one student for an entire calendar year of free music lessons!', this)">
+              <div class="tier-amount">$2,000</div>
+              <div class="tier-title">Full-Year Sponsorship</div>
+              <div class="tier-desc">Sponsor a student for one complete year of life-changing music!</div>
+            </div>
+          </div>
+
+          <div class="custom-amount-bar">
+            <span style="font-weight: 800; color: var(--silver-bright); font-size: 1.2rem;">$</span>
+            <input type="number" id="custom-donation-input" placeholder="Or enter a custom gift amount (e.g. 100)" oninput="handleCustomAmount(this.value)" />
+          </div>
+
+          <h3 style="font-size: 1.3rem; margin-bottom: 14px;">2. Choose Donation Schedule</h3>
+          <div class="freq-pills">
+            <button class="freq-btn active" onclick="selectFrequency('One-Time Donation', this)">One-Time Gift</button>
+            <button class="freq-btn" onclick="selectFrequency('Monthly Donation', this)">Monthly Sponsor</button>
+            <button class="freq-btn" onclick="selectFrequency('Annual Donation', this)">Annual Patron</button>
+          </div>
+
+          <div class="smoky-card" style="margin-top: 24px; padding: 20px 24px; border-radius: 16px; border-left: 3px solid var(--silver-bright);">
+            <p class="serif-italic" style="color: #fff; font-size: 1.05rem;">
+              &ldquo;Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything.&rdquo;
+            </p>
+            <span style="font-size: 0.8rem; color: var(--silver-mid); font-weight: 700;">&mdash; Plato</span>
+          </div>
+        </div>
+
+        <!-- Right Interactive Checkout Summary -->
+        <div class="donate-summary-box smoky-card">
+          <span style="font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--silver-mid); font-weight: 700;" id="summary-freq-label">
+            ONE-TIME DONATION SUMMARY
+          </span>
+          <div class="summary-impact-Number" id="summary-total-display">$206.00</div>
+          <h4 id="summary-tier-title" style="font-size: 1.2rem; color: #fff; margin-bottom: 6px;">
+            1 Full Month of Music Lessons
+          </h4>
+          <p id="summary-tier-desc" style="font-size: 0.9rem; color: var(--silver-muted);">
+            Funds an entire month of weekly 1-on-1 instruction &amp; personalized feedback.
+          </p>
+
+          <label class="fee-toggle-row">
+            <input type="checkbox" id="cover-fee-checkbox" checked onchange="recalcDonation()" />
+            <span>Add <strong>3% (<span id="fee-dollar-span">$6.00</span>)</strong> to cover Stripe processing fees so 100% goes to students</span>
+          </label>
+
+          <button class="btn btn-magenta" style="width: 100%; padding: 16px; font-size: 1.02rem;" onclick="triggerDonateCheckout()">
+            <i class="fa-solid fa-lock"></i> Proceed to Secure Stripe Portal
+          </button>
+
+          <div class="venmo-card">
+            <div>
+              <strong style="display: block; color: #fff; font-size: 0.95rem;"><i class="fa-brands fa-vimeo-v" style="color: var(--silver-bright);"></i> Now Available on Venmo!</strong>
+              <span style="font-size: 0.8rem; color: var(--silver-muted);">Sponsor a student with one tap from your smartphone.</span>
+            </div>
+            <a href="https://www.musicforallhearts.org/donate" target="_blank" rel="noopener" class="btn btn-silver-outline" style="padding: 9px 16px; font-size: 0.82rem;">
+              Open Venmo / Give
+            </a>
+          </div>
+
+          <p style="font-size: 0.76rem; color: var(--silver-dim); text-align: center; margin-top: 16px;">
+            <i class="fa-solid fa-building-columns"></i> Music for All Hearts Organization is a registered 501(c)(3) non-profit recognized by the IRS. All gifts are tax-deductible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       BOARD OF DIRECTORS ("OUR LEADERS")
+       ========================================== -->
+  <section id="board" class="sec">
+    <div class="container">
+      <div class="sec-header">
+        <div class="eyebrow-tag"><i class="fa-solid fa-users-line"></i> Our Board &amp; Leadership</div>
+        <h2 class="sec-title">Guided by <span class="text-silver-shimmer">30+ Years</span> of Musical Excellence</h2>
+        <p class="sec-sub">
+          With over 30 years of combined musical expertise and 15+ years teaching students of all ages across multiple states and continents, our board puts service to students first.
+        </p>
+      </div>
+
+      <div class="board-grid">
+        <!-- Abraham Isai Cruz -->
+        <div class="board-card smoky-card">
+          <div class="board-photo-wrap">
+            <img src="abraham_cruz_studio.jpg" alt="Abraham Isai Cruz - President, CEO" />
+          </div>
+          <div class="board-info">
+            <div class="board-role">President &amp; Chief Executive Officer</div>
+            <h3 class="board-name">Abraham Isai Cruz</h3>
+            <p class="board-bio">
+              Accomplished international vocalist, educator, and founder of Cruz Music Studio &amp; Music For All Hearts, dedicated to eliminating financial barriers to elite music education in Texas and Illinois.
+            </p>
+          </div>
+        </div>
+
+        <!-- Christopher Humbert Jr -->
+        <div class="board-card smoky-card">
+          <div class="board-photo-wrap">
+            <img src="christopher_humbert_studio.jpg" alt="Christopher Humbert Jr - Vice President, CMO" />
+          </div>
+          <div class="board-info">
+            <div class="board-role">Vice President &amp; Chief Marketing Officer</div>
+            <h3 class="board-name">Christopher Humbert Jr</h3>
+            <p class="board-bio">
+              Passionate performer, educator, and philanthropic leader shaping community outreach, hospital partnerships, and student mentorship initiatives.
+            </p>
+          </div>
+        </div>
+
+        <!-- Lidia Rubio -->
+        <div class="board-card smoky-card">
+          <div class="board-photo-wrap">
+            <img src="lidia_rubio_studio.jpg" alt="Lidia Rubio - Chief Executive Assistant" />
+          </div>
+          <div class="board-info">
+            <div class="board-role">Chief Executive Assistant</div>
+            <h3 class="board-name">Lidia Rubio</h3>
+            <p class="board-bio">
+              Ensuring every student, family, and hospital partner receives seamless care, interview coordination, and operational excellence from day one.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FREQUENTLY ASKED QUESTIONS
+       ========================================== -->
+  <section id="faqs" class="sec">
+    <div class="container">
+      <div class="sec-header">
+        <div class="eyebrow-tag"><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</div>
+        <h2 class="sec-title">Everything Families Need to Know</h2>
+        <p class="sec-sub">Clear answers on eligibility, multi-instrument lessons, and how our virtual and hospital sessions work.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item smoky-card open">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>How can my student best prepare to work with Music For All Hearts?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            We recommend that the best thing to do is to support your student&rsquo;s gift! Whether that means providing a dedicated quiet space for a virtual lesson or sharing in the joy of seeing your student&rsquo;s progress, this encouragement is a vital part of our shared investment in your child. At MFAH, we work tirelessly to provide an exceptional music education at <strong style="color:#fff;">zero cost</strong> to the student or family.
+          </div>
+        </div>
+
+        <div class="faq-item smoky-card">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>When can my student get started?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            MFAH consistently evaluates applications submitted through our enrollment portal below. Once completed, a representative on our team will reach out to schedule a brief virtual or phone interview. In just a few short weeks, your student can receive notice of their enrollment status and their assigned teacher!
+          </div>
+        </div>
+
+        <div class="faq-item smoky-card">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Can my student take lessons in more than one interest area?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            <strong style="color:#fff;">Absolutely!</strong> We offer each student in our program a fixed number of lessons to redeem for the calendar year. Those lessons can be used across voice, piano, or guitar at the discretion of the student and their teacher&rsquo;s availability.
+          </div>
+        </div>
+
+        <div class="faq-item smoky-card">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>How do I know if my student is eligible?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            We serve students ages 4 to 18 who want and desire to take music lessons! If your student is excited about this opportunity, that is step number one. A friendly interview with the parent/guardian and child is conducted after receiving the initial application to learn about your student&rsquo;s goals and assess financial need.
+          </div>
+        </div>
+
+        <div class="faq-item smoky-card">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span>Where do lessons take place?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-a">
+            We offer convenient virtual 1-on-1 lessons via <strong style="color:#fff;">Zoom or Skype</strong>, and we also consider <strong style="color:#fff;">in-person lessons on a case-by-case basis</strong>. Local hospital group sessions—including our partnership with <strong style="color:#fff;">University Health Hospital in San Antonio</strong> and partner hospitals in Chicago—are held in-person in full compliance with regional health and safety precautions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       INTERACTIVE ENROLLMENT & CONTACT PORTAL
+       ========================================== -->
+  <section id="enroll-portal" class="sec" style="padding-top: 40px;">
+    <div class="container">
+      <div class="sec-header">
+        <div class="eyebrow-tag"><i class="fa-solid fa-paper-plane"></i> Let&rsquo;s Work Together</div>
+        <h2 class="sec-title">Enroll a Student or <span class="text-silver-shimmer">Join Our Movement</span></h2>
+        <p class="sec-sub">
+          Ready to enroll your child for free lessons, join our philanthropic teaching roster, or collaborate on hospital outreach? Start right here.
+        </p>
+      </div>
+
+      <div class="portal-box smoky-card">
+        <div class="portal-tabs">
+          <button class="portal-tab-btn active" id="tab-btn-enroll" onclick="selectPortalTab('enroll')">
+            <i class="fa-solid fa-user-graduate"></i> Enroll a Student (Ages 4–18)
+          </button>
+          <button class="portal-tab-btn" id="tab-btn-teacher" onclick="selectPortalTab('teacher')">
+            <i class="fa-solid fa-chalkboard-user"></i> Join Our Teaching Team
+          </button>
+          <button class="portal-tab-btn" id="tab-btn-partner" onclick="selectPortalTab('partner')">
+            <i class="fa-solid fa-hospital"></i> Hospital &amp; Community Outreach
+          </button>
+        </div>
+
+        <div class="portal-content">
+          <form id="mfah-portal-form" onsubmit="handlePortalSubmit(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label id="lbl-name">Parent / Guardian Full Name *</label>
+                <input type="text" class="form-control" required placeholder="e.g. Maria Rodriguez" />
+              </div>
+
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" class="form-control" required placeholder="you@email.com" />
+              </div>
+
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" class="form-control" required placeholder="(210) 555-0199" />
+              </div>
+
+              <div class="form-group" id="fg-city">
+                <label>City &amp; State *</label>
+                <select class="form-control">
+                  <option value="San Antonio, TX">San Antonio, TX Area</option>
+                  <option value="Chicago, IL">Chicago, IL Area</option>
+                  <option value="Virtual / Other">Other U.S. Location (Virtual Zoom/Skype)</option>
+                </select>
+              </div>
+
+              <div class="form-group" id="fg-student-age">
+                <label>Student Name &amp; Age (4–18)</label>
+                <input type="text" class="form-control" placeholder="e.g. Mateo (Age 10)" />
+              </div>
+
+              <div class="form-group" id="fg-instrument">
+                <label>Primary Musical Interest Area(s)</label>
+                <select class="form-control">
+                  <option value="Voice">Vocal Lessons (12-Week Core &amp; Beyond)</option>
+                  <option value="Piano">Instrumental — Piano / Keyboard (61+ keys)</option>
+                  <option value="Guitar">Instrumental — Guitar</option>
+                  <option value="Multiple">Multiple Interests (Voice + Piano/Guitar)</option>
+                  <option value="Hospital Group">Pediatric Hospital Group Session</option>
+                </select>
+              </div>
+
+              <div class="form-group full">
+                <label id="lbl-message">Tell Us About Your Student, Goals, or How We Can Help *</label>
+                <textarea class="form-control" rows="4" required placeholder="Share your student's excitement for music, preferred lesson format (Virtual Zoom/Skype or In-Person), or any questions for our interview team..."></textarea>
+              </div>
+            </div>
+
+            <div style="margin-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+              <span style="font-size: 0.85rem; color: var(--silver-muted);">
+                <i class="fa-solid fa-clock" style="color: var(--silver-bright);"></i> Our team reviews applications weekly and will reach out to schedule your interview.
+              </span>
+              <button type="submit" class="btn btn-magenta" style="padding: 16px 38px; font-size: 1rem;">
+                <i class="fa-solid fa-paper-plane"></i> <span id="submit-btn-text">Submit Student Application</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="nav-logo-pill" style="width: fit-content; margin-bottom: 18px;">
+          <img src="logo1_light.png" alt="Music For All Hearts" style="height: 46px; width: auto;" />
+        </div>
+        <p style="font-size: 0.9rem; color: var(--silver-muted); margin-bottom: 16px;">
+          Empowering the next generation of youth ages 4–18 through 100% free music lessons, compassionate mentorship, and pediatric hospital partnerships across San Antonio &amp; Chicago.
+        </p>
+        <div style="display: flex; gap: 12px;">
+          <a href="http://instagram.com/musicforallheartsinc" target="_blank" rel="noopener" class="btn btn-glass" style="padding: 10px 14px;" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:admin@musicforallhearts.org" class="btn btn-glass" style="padding: 10px 14px;" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#mission">Our Mission</a></li>
+          <li><a href="#hospital-network">University Health &amp; Hospitals</a></li>
+          <li><a href="#programs">Vocal &amp; Instrumental Lessons</a></li>
+          <li><a href="#board">Board of Directors</a></li>
+          <li><a href="#faqs">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <ul class="footer-links">
+          <li><a href="#donate">Sponsor a Student ($50–$2,000)</a></li>
+          <li><a href="#enroll-portal" onclick="selectPortalTab('enroll')">Enroll a Student</a></li>
+          <li><a href="#enroll-portal" onclick="selectPortalTab('teacher')">Become a Volunteer/Teacher</a></li>
+          <li><a href="#enroll-portal" onclick="selectPortalTab('partner')">Hospital &amp; Community Outreach</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Stay in the Loop</h4>
+        <p style="font-size: 0.86rem; color: var(--silver-muted);">
+          Sign up with your email address to receive news on student recitals, hospital partnerships, and impact updates.
+        </p>
+        <form class="newsletter-mini" onsubmit="event.preventDefault(); showToast('Thank you for subscribing to Music For All Hearts updates!'); this.reset();">
+          <input type="email" required placeholder="Your email address" />
+          <button type="submit" class="btn btn-silver-outline" style="padding: 11px 18px;">Sign Up</button>
+        </form>
+        <div style="margin-top: 18px; font-size: 0.84rem; color: var(--silver-muted);">
+          <div><i class="fa-solid fa-envelope" style="color: var(--silver-bright); width: 20px;"></i> admin@musicforallhearts.org</div>
+          <div style="margin-top: 4px;"><i class="fa-solid fa-location-dot" style="color: var(--silver-bright); width: 20px;"></i> San Antonio, TX 78222 &amp; Chicago, IL</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2025–2026 Music for All Hearts Organization. All Rights Reserved.</div>
+      <div><strong>IRS Recognized 501(c)(3) Non-Profit Organization</strong> &bull; Empowering Youth Through Music</div>
+    </div>
+  </footer>
+
+  <!-- Toast Alert -->
+  <div class="toast-msg" id="toast-msg">
+    <i class="fa-solid fa-circle-check" style="color: var(--silver-bright); font-size: 1.2rem;"></i>
+    <span id="toast-text">Action completed!</span>
+  </div>
+
+  <!-- ==========================================
+       INTERACTIVE SCRIPTS (SYNTH, CANVAS, PORTAL)
+       ========================================== -->
+  <script>
+    // 1. Web Audio API Synthesizer for Interactive Studio Chimes
+    let audioCtx = null;
+    let wavePulseEnergy = 0;
+
+    function playHeartChord(freqs, btnEl) {
+      try {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+
+        const now = audioCtx.currentTime;
+        freqs.forEach((f, idx) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+
+          osc.type = idx % 2 === 0 ? 'triangle' : 'sine';
+          osc.frequency.setValueAtTime(f, now + idx * 0.045);
+
+          gain.gain.setValueAtTime(0.001, now + idx * 0.045);
+          gain.gain.exponentialRampToValueAtTime(0.14, now + idx * 0.045 + 0.04);
+          gain.gain.exponentialRampToValueAtTime(0.0008, now + idx * 0.045 + 1.8);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+
+          osc.start(now + idx * 0.045);
+          osc.stop(now + idx * 0.045 + 1.85);
+        });
+
+        wavePulseEnergy = 1.0;
+
+        document.querySelectorAll('.chord-btn').forEach(b => b.classList.remove('playing'));
+        if (btnEl) {
+          btnEl.classList.add('playing');
+          setTimeout(() => btnEl.classList.remove('playing'), 900);
+        }
+      } catch (e) {
+        console.warn('Audio playback error:', e);
+      }
+    }
+
+    // 2. Animated Silver & Subtle Brand Soundwave Canvas in Hero
+    const canvas = document.getElementById('hero-wave-canvas');
+    const ctx = canvas.getContext('2d');
+    let animPhase = 0;
+
+    function resizeCanvas() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function renderWave() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const w = canvas.width;
+      const h = canvas.height;
+      const midY = h * 0.55;
+
+      animPhase += 0.022 + wavePulseEnergy * 0.06;
+      wavePulseEnergy *= 0.96;
+
+      const lines = [
+        { color: 'rgba(226, 232, 240, 0.32)', amp: 36 + wavePulseEnergy * 55, freq: 0.0045, speed: 1.0 },
+        { color: 'rgba(148, 163, 184, 0.24)', amp: 28 + wavePulseEnergy * 45, freq: 0.0055, speed: -0.8 },
+        { color: 'rgba(225, 25, 104, 0.22)', amp: 18 + wavePulseEnergy * 35, freq: 0.0075, speed: 1.3 }
+      ];
+
+      lines.forEach(line => {
+        ctx.beginPath();
+        ctx.strokeStyle = line.color;
+        ctx.lineWidth = 2;
+        for (let x = 0; x <= w; x += 6) {
+          const y = midY + Math.sin(x * line.freq + animPhase * line.speed) * line.amp * Math.sin((x / w) * Math.PI);
+          if (x === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      });
+
+      requestAnimationFrame(renderWave);
+    }
+    renderWave();
+
+    // 3. Hospital Partner City Filter (with Fluid Cross-Fade & Staggered Glide)
+    function filterHospitals(region, btnEl) {
+      document.querySelectorAll('.city-tab').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+
+      const grid = document.getElementById('hospital-grid');
+      if (!grid) return;
+
+      grid.classList.add('fluid-fade-target', 'fading-out');
+      setTimeout(() => {
+        let visibleIndex = 0;
+        document.querySelectorAll('.hospital-card').forEach(card => {
+          if (region === 'all' || card.dataset.region === region) {
+            card.style.display = 'flex';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(14px)';
+            const delay = visibleIndex * 45;
+            visibleIndex++;
+            setTimeout(() => {
+              card.style.transition = 'opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1), transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease';
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, delay);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        grid.classList.remove('fading-out');
+      }, 220);
+    }
+
+    // 4. Interactive Sponsorship & Donation Calculator (with Smooth Summary Fade)
+    let currentDonationAmount = 200;
+    let currentFrequency = 'One-Time Donation';
+
+    function animateSummaryBox(callback) {
+      const box = document.querySelector('.donate-summary-box');
+      if (!box) {
+        callback();
+        return;
+      }
+      box.classList.add('fluid-fade-target', 'fading-out');
+      setTimeout(() => {
+        callback();
+        box.classList.remove('fading-out');
+      }, 190);
+    }
+
+    function selectDonationTier(amount, title, desc, cardEl) {
+      currentDonationAmount = amount;
+      document.getElementById('custom-donation-input').value = '';
+      document.querySelectorAll('.tier-card').forEach(c => c.classList.remove('active'));
+      if (cardEl) cardEl.classList.add('active');
+
+      animateSummaryBox(() => {
+        document.getElementById('summary-tier-title').textContent = title;
+        document.getElementById('summary-tier-desc').textContent = desc;
+        recalcDonation();
+      });
+    }
+
+    function handleCustomAmount(val) {
+      const parsed = parseFloat(val);
+      document.querySelectorAll('.tier-card').forEach(c => c.classList.remove('active'));
+      if (!isNaN(parsed) && parsed > 0) {
+        currentDonationAmount = parsed;
+        const lessonsCount = Math.max(1, Math.round(parsed / 50));
+        document.getElementById('summary-tier-title').textContent = 'Custom Community Impact Gift';
+        document.getElementById('summary-tier-desc').textContent =
+          `Provides approximately ${lessonsCount} private music lesson${lessonsCount > 1 ? 's' : ''} or instrument support for young musicians.`;
+      } else {
+        currentDonationAmount = 0;
+      }
+      recalcDonation();
+    }
+
+    function selectFrequency(freq, btnEl) {
+      currentFrequency = freq;
+      document.querySelectorAll('.freq-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+      animateSummaryBox(() => {
+        document.getElementById('summary-freq-label').textContent = freq.toUpperCase() + ' SUMMARY';
+        recalcDonation();
+      });
+    }
+
+    function recalcDonation() {
+      const coverFee = document.getElementById('cover-fee-checkbox').checked;
+      const fee = +(currentDonationAmount * 0.03).toFixed(2);
+      const total = coverFee ? currentDonationAmount + fee : currentDonationAmount;
+
+      document.getElementById('fee-dollar-span').textContent = '$' + fee.toFixed(2);
+      document.getElementById('summary-total-display').textContent =
+        '$' + total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function triggerDonateCheckout() {
+      showToast(`Redirecting to secure Stripe portal for your ${document.getElementById('summary-total-display').textContent} ${currentFrequency}...`);
+      setTimeout(() => {
+        window.open('https://www.musicforallhearts.org/donate', '_blank', 'noopener');
+      }, 900);
+    }
+
+    // 5. FAQ Accordion
+    function toggleFaq(btnEl) {
+      const item = btnEl.closest('.faq-item');
+      item.classList.toggle('open');
+    }
+
+    // 6. Enrollment & Contact Portal Tabs (with Fluid Form Cross-Fade)
+    function selectPortalTab(mode) {
+      ['enroll', 'teacher', 'partner'].forEach(m => {
+        document.getElementById('tab-btn-' + m).classList.toggle('active', m === mode);
+      });
+
+      const formEl = document.getElementById('portal-form');
+      if (formEl) {
+        formEl.classList.add('fluid-fade-target', 'fading-out');
+      }
+
+      setTimeout(() => {
+        const lblName = document.getElementById('lbl-name');
+        const fgStudent = document.getElementById('fg-student-age');
+        const fgInst = document.getElementById('fg-instrument');
+        const lblMsg = document.getElementById('lbl-message');
+        const btnTxt = document.getElementById('submit-btn-text');
+
+        if (mode === 'enroll') {
+          lblName.textContent = 'Parent / Guardian Full Name *';
+          fgStudent.style.display = 'flex';
+          fgInst.style.display = 'flex';
+          lblMsg.textContent = 'Tell Us About Your Student, Goals, or Financial Need *';
+          btnTxt.textContent = 'Submit Student Application';
+        } else if (mode === 'teacher') {
+          lblName.textContent = 'Educator / Musician Full Name *';
+          fgStudent.style.display = 'none';
+          fgInst.style.display = 'flex';
+          lblMsg.textContent = 'Share Your Teaching Experience, Instruments & Philanthropic Passion *';
+          btnTxt.textContent = 'Apply to Join Teaching Roster';
+        } else {
+          lblName.textContent = 'Contact Name & Hospital / Organization *';
+          fgStudent.style.display = 'none';
+          fgInst.style.display = 'none';
+          lblMsg.textContent = 'How Can We Collaborate on Pediatric Hospital or Community Outreach? *';
+          btnTxt.textContent = 'Send Partnership Inquiry';
+        }
+
+        if (formEl) {
+          formEl.classList.remove('fading-out');
+        }
+      }, 210);
+    }
+
+    function handlePortalSubmit(e) {
+      e.preventDefault();
+      showToast('Thank you! Your submission has been received by Music For All Hearts. Our team will reach out shortly!');
+      e.target.reset();
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast-msg');
+      document.getElementById('toast-text').textContent = msg;
+      t.style.display = 'inline-flex';
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        t.style.display = 'none';
+      }, 4200);
+    }
+
+    // 7. Auto-Fading Top Navbar (~50% Opacity on Scroll, 100% on Hover/Top)
+    //    + Liquid Sliding Nav Glider Pill + Silky Custom Smooth Scrolling + Scroll Reveal
+    (function initFluidExperience() {
+      const navbar = document.querySelector('header.navbar');
+      const navLinksContainer = document.querySelector('.nav-links');
+      const navAnchors = Array.from(document.querySelectorAll('.nav-links a'));
+      let scrollIdleTimer = null;
+
+      // Create liquid glider pill inside .nav-links
+      let glider = null;
+      if (navLinksContainer) {
+        glider = document.createElement('div');
+        glider.className = 'nav-glider';
+        navLinksContainer.prepend(glider);
+      }
+
+      function moveGliderTo(linkEl) {
+        if (!glider || !linkEl) return;
+        const offsetLeft = linkEl.offsetLeft + linkEl.parentElement.offsetLeft;
+        glider.style.width = `${linkEl.offsetWidth}px`;
+        glider.style.transform = `translateX(${offsetLeft}px)`;
+        glider.style.opacity = '1';
+      }
+
+      let activeSectionLink = navAnchors[0] || null;
+
+      navAnchors.forEach(a => {
+        a.addEventListener('mouseenter', () => moveGliderTo(a));
+      });
+      if (navLinksContainer) {
+        navLinksContainer.addEventListener('mouseleave', () => {
+          if (activeSectionLink) {
+            moveGliderTo(activeSectionLink);
+          } else if (glider) {
+            glider.style.opacity = '0';
+          }
+        });
+      }
+
+      // Navbar auto-fade to ~50% on scroll + active section tracking
+      const trackedSections = navAnchors
+        .map(a => {
+          const id = a.getAttribute('href');
+          return id && id.startsWith('#') && id.length > 1 ? { link: a, sec: document.querySelector(id) } : null;
+        })
+        .filter(Boolean);
+
+      function handleWindowScroll() {
+        const y = window.scrollY || window.pageYOffset;
+        if (navbar) {
+          if (y > 40) {
+            navbar.classList.add('nav-scrolled');
+            navbar.classList.add('nav-scrolling');
+          } else {
+            navbar.classList.remove('nav-scrolled');
+            navbar.classList.remove('nav-scrolling');
+          }
+          clearTimeout(scrollIdleTimer);
+          scrollIdleTimer = setTimeout(() => {
+            navbar.classList.remove('nav-scrolling');
+          }, 320);
+        }
+
+        // Highlight active section in navbar glider
+        const scrollProbe = y + window.innerHeight * 0.32;
+        let currentMatch = null;
+        for (const item of trackedSections) {
+          if (item.sec && item.sec.offsetTop <= scrollProbe) {
+            currentMatch = item.link;
+          }
+        }
+        if (currentMatch !== activeSectionLink) {
+          activeSectionLink = currentMatch;
+          navAnchors.forEach(a => a.classList.toggle('active-nav', a === activeSectionLink));
+          if (activeSectionLink) {
+            moveGliderTo(activeSectionLink);
+          } else if (glider) {
+            glider.style.opacity = '0';
+          }
+        }
+      }
+
+      window.addEventListener('scroll', handleWindowScroll, { passive: true });
+      window.addEventListener('resize', () => {
+        if (activeSectionLink) moveGliderTo(activeSectionLink);
+      });
+      setTimeout(handleWindowScroll, 100);
+
+      // Silky Eased Smooth Scrolling (easeInOutQuart) with Soft Page Blend
+      let scrollAnimId = null;
+      function smoothScrollToY(targetY, duration = 960) {
+        if (scrollAnimId) cancelAnimationFrame(scrollAnimId);
+        const startY = window.scrollY || window.pageYOffset;
+        const diff = targetY - startY;
+        if (Math.abs(diff) < 4) return;
+
+        const startTime = performance.now();
+        document.body.classList.add('is-nav-gliding');
+
+        function easeInOutQuart(t) {
+          return t < 0.5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2;
+        }
+
+        function step(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(1, elapsed / duration);
+          const eased = easeInOutQuart(progress);
+          window.scrollTo(0, startY + diff * eased);
+
+          if (progress < 1) {
+            scrollAnimId = requestAnimationFrame(step);
+          } else {
+            scrollAnimId = null;
+            document.body.classList.remove('is-nav-gliding');
+          }
+        }
+
+        setTimeout(() => {
+          document.body.classList.remove('is-nav-gliding');
+        }, Math.min(duration - 180, 620));
+
+        scrollAnimId = requestAnimationFrame(step);
+      }
+
+      // Cancel custom scroll animation immediately if user scrolls manually with mouse wheel / touch
+      window.addEventListener('wheel', () => {
+        if (scrollAnimId) {
+          cancelAnimationFrame(scrollAnimId);
+          scrollAnimId = null;
+          document.body.classList.remove('is-nav-gliding');
+        }
+      }, { passive: true });
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (!href || href === '#') {
+            e.preventDefault();
+            smoothScrollToY(0, 900);
+            return;
+          }
+          const targetEl = document.querySelector(href);
+          if (targetEl) {
+            e.preventDefault();
+            const navOffset = navbar ? navbar.offsetHeight + 12 : 76;
+            const top = targetEl.getBoundingClientRect().top + (window.scrollY || window.pageYOffset) - navOffset;
+            smoothScrollToY(Math.max(0, top), 960);
+          }
+        });
+      });
+
+      // Soft Blended Scroll-Reveal Observer for Sections & Cards
+      const revealSelectors = [
+        '.sec-header',
+        '.uh-spotlight-banner',
+        '.hospital-card',
+        '.mission-visual',
+        '.pillar-box',
+        '.program-card',
+        '.donate-container > div',
+        '.board-card',
+        '.faq-item',
+        '.portal-box'
+      ];
+      const revealElements = document.querySelectorAll(revealSelectors.join(', '));
+      revealElements.forEach((el, idx) => {
+        el.classList.add('reveal-blend');
+        el.style.transitionDelay = `${(idx % 3) * 65}ms`;
+      });
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+        );
+        revealElements.forEach(el => observer.observe(el));
+      } else {
+        revealElements.forEach(el => el.classList.add('in-view'));
+      }
+    })();
+  </script>
+</body>
+</html>
